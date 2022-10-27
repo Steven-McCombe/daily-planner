@@ -12,7 +12,6 @@ var plannerDiv = $('#planner-div')
 var saveBtn = $('.saveBtn')
 var eventsSaved = []
 
-var texttest = $('#text-0')
 
 //CALL FUNCTIONS
 renderSaved()

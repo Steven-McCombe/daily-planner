@@ -6,10 +6,10 @@ body {
 
 textarea {
   background: transparent;
-  border: none;
+  
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 
@@ -37,29 +37,35 @@ textarea {
 }
 
 .hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  font-weight: bolder;
+  border: 1px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
   width: ;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
@@ -67,6 +73,13 @@ textarea {
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  font-size: 50px;
+  transition: all 0.1s ease-in-out;
+  color: yellow
+}
+
+.planner-row {
+margin: 5px;
+box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.75);
+border-radius: 15px;
 }
