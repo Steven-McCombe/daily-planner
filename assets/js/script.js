@@ -14,13 +14,14 @@
 
 // DOM Elements 
 var currentDay = $('#currentDay');
+
 var currentTime = moment().format('HH')
 var workHours = 9
 //Get row element
 var plannerRow = $('.planner-row')
-var plannerDiv = $('.container')
+var plannerDiv = $('#planner-div')
 
-
+var divDataTime = $()
 //Function to display the current day and date.
 function renderDayDate() {
     // var dayDate = moment().format('LLLL')
@@ -28,16 +29,19 @@ function renderDayDate() {
     currentDay.text(dayDate)
 }
 renderDayDate()
+renderColors()
 
-//console tests
-console.log(plannerRow.data('value'))
-console.log(plannerRow.data('value'))
-console.log(currentTime)
-
-for (var i = 0; i < workHours; i++)
-if (plannerDiv.children[i].data('value') < currentTime) {
-    plannerDiv.children[i].addClass('past')
+// function to render colors NEED TO FIX THE LOOP TO INCLUDE INDEX 0
+function renderColors() {
+    for (var i = 0; i <= workHours; i++) {
+        var targetRow = plannerDiv.children('div').eq(i).attr('data-time')
+        var targetText = plannerDiv.children('div').eq(i).children('textarea')
+        if (targetRow < currentTime) {
+            targetText.attr('class', 'past col-10')
+        } else if (targetRow == currentTime) {
+            targetText.attr('class', 'present col-10')
+        } else {
+            targetText.attr('class', 'future col-10')
+        }
+    }
 }
-
-console.log(plannerRow.data('value'))
-console.log(plannerRow.data('value'))
