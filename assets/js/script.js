@@ -50,19 +50,26 @@ function renderColors() {
 console.log(currentTime)
 
 // function to push to local storage 
-saveBtn.on('click', function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    var getTextContent = $(this).siblings('textarea').val()
-    var getTimeContent = $(this).parent().attr('data-time')
+// saveBtn.on('click', function (event) {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     var getTextContent = $(this).siblings('textarea').val()
+//     var getTimeContent = $(this).parent().attr('data-time')
   
-    var eventsArray = {
-         time: getTimeContent,
-         description: getTextContent
-    }
-    eventsSaved.push(eventsArray)
-    localStorage.setItem('Events', JSON.stringify(eventsSaved))
+//     var eventsArray = {
+//          time: getTimeContent,
+//          description: getTextContent
+//     }
+//     if eventsArray.time || eventsArray.description
+//     eventsSaved.push(eventsArray)
+//     localStorage.setItem('Events', JSON.stringify(eventsSaved))
     
-}); 
+// }); 
 
 
+saveBtn.on('click', function (event) {
+    var key = $(this).parent().attr('data-time')
+    var getTextContent = $(this).siblings('textarea').val()
+    localStorage.setItem (key, getTextContent)
+});
+ 
