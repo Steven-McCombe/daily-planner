@@ -2,7 +2,7 @@
 // DOM Elements 
 var currentDay = $('#currentDay');
 
-var currentTime = moment().format('HH')
+var currentTime = parseInt(moment().format('HH'))
 var workHours = 9
 var timeKey = 8
 //Get row element
@@ -10,7 +10,7 @@ var plannerRow = $('.planner-row')
 // var plannerDiv = document.getElementById("planner-div")
 var plannerDiv = $('#planner-div')
 var saveBtn = $('.saveBtn')
-var eventsSaved = []
+
 
 
 //CALL FUNCTIONS
@@ -24,9 +24,9 @@ function renderDayDate() {
     currentDay.text(dayDate)
 }
 
-//todo function to render colors NEED TO FIX THE LOOP TO INCLUDE INDEX 0
+//function to render the colors. 
 function renderColors() {
-    for (var i = 0; i <= workHours -1; i++) {
+    for (var i = 0; i < workHours; i++) {    
         var targetRow = plannerDiv.children('div').eq(i).attr('data-time')
         var targetText = plannerDiv.children('div').eq(i).children('textarea')
         if (targetRow < currentTime) {
