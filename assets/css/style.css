@@ -1,33 +1,32 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; 
   font-size: 16px;
   line-height: 1;
 }
+.time-lead {
+  font-size: 40px;
 
+}
 textarea {
+  white-space: pre-wrap;
   background: transparent;
-  
   resize: none;
   color: #000000;
   border: 1px solid black;
   padding: 10px;
+  font-size: 20px;
+
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #bedebe;
   color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
   border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.75);
+  margin: 10px;
 }
 
 .row {
@@ -35,7 +34,11 @@ textarea {
   height: 80px;
   border-top: 1px solid white;
 }
-
+.time-block {
+  margin: 5px;
+  box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  }
 .hour {
   display: flex;
   justify-content: center;
@@ -51,7 +54,6 @@ textarea {
 .past {
   background-color: #d3d3d3;
   color: black;
-  width: ;
 }
 
 .present {
@@ -78,8 +80,3 @@ textarea {
   color: yellow
 }
 
-.planner-row {
-margin: 5px;
-box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.75);
-border-radius: 15px;
-}
