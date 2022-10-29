@@ -9,6 +9,7 @@ This project is a daily work planner to help organize your day. Creating this pr
 - Enter event detail into the allocated time area.
 - Click save button to save event details. This will save the event to local storage.
 - Text areas will change color depending on the current time. Grey - Past, Red - Present, Green - Future.
+- Click on the trash can to delete all saved items. 
 
 ## 🔗 Links
 

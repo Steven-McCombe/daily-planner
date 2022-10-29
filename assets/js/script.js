@@ -4,6 +4,7 @@ var currentDay = $('#currentDay');
 var plannerRow = $('.time-block')
 var plannerDiv = $('#planner-div')
 var saveBtn = $('.saveBtn')
+var clearBtn = $('.clearBtn')
 var timeNowEl = $('#timeNow')
 //Global Variables
 var currentTime = parseInt(moment().format('HH')) //24 Hour format 
@@ -52,4 +53,10 @@ saveBtn.on('click', function (event) {
     var getTextContent = $(this).siblings('textarea').val()
     localStorage.setItem (key, getTextContent)
 });
- 
+//Event Listener to clear local storage
+clearBtn.on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    localStorage.clear()
+    renderSaved()   
+});
